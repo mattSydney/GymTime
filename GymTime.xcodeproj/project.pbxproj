@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		4146080820B32E1000BB0674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146080720B32E1000BB0674 /* AppDelegate.swift */; };
-		4146080A20B32E1000BB0674 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146080920B32E1000BB0674 /* ViewController.swift */; };
 		4146080D20B32E1000BB0674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4146080B20B32E1000BB0674 /* Main.storyboard */; };
 		4146080F20B32E1000BB0674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4146080E20B32E1000BB0674 /* Assets.xcassets */; };
 		4146081220B32E1000BB0674 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4146081020B32E1000BB0674 /* LaunchScreen.storyboard */; };
+		4146081B20B32F5100BB0674 /* TimersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146081A20B32F5100BB0674 /* TimersVC.swift */; };
+		4146081E20B3306C00BB0674 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146081D20B3306C00BB0674 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4146080420B32E1000BB0674 /* GymTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4146080720B32E1000BB0674 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4146080920B32E1000BB0674 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4146080C20B32E1000BB0674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4146080E20B32E1000BB0674 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4146081120B32E1000BB0674 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4146081320B32E1000BB0674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4146081A20B32F5100BB0674 /* TimersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimersVC.swift; sourceTree = "<group>"; };
+		4146081D20B3306C00BB0674 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		4146080620B32E1000BB0674 /* GymTime */ = {
 			isa = PBXGroup;
 			children = (
+				4146081C20B3301A00BB0674 /* misc */,
+				4146081920B32ECC00BB0674 /* Controllers */,
 				4146080720B32E1000BB0674 /* AppDelegate.swift */,
-				4146080920B32E1000BB0674 /* ViewController.swift */,
 				4146080B20B32E1000BB0674 /* Main.storyboard */,
 				4146080E20B32E1000BB0674 /* Assets.xcassets */,
 				4146081020B32E1000BB0674 /* LaunchScreen.storyboard */,
 				4146081320B32E1000BB0674 /* Info.plist */,
 			);
 			path = GymTime;
+			sourceTree = "<group>";
+		};
+		4146081920B32ECC00BB0674 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4146081A20B32F5100BB0674 /* TimersVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4146081C20B3301A00BB0674 /* misc */ = {
+			isa = PBXGroup;
+			children = (
+				4146081D20B3306C00BB0674 /* Constants.swift */,
+			);
+			path = misc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,8 +155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4146080A20B32E1000BB0674 /* ViewController.swift in Sources */,
+				4146081B20B32F5100BB0674 /* TimersVC.swift in Sources */,
 				4146080820B32E1000BB0674 /* AppDelegate.swift in Sources */,
+				4146081E20B3306C00BB0674 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
