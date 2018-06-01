@@ -9,7 +9,46 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TimersVC-->
+        <!--Workouts-->
+        <scene sceneID="Z9L-Gf-JHX">
+            <objects>
+                <tableViewController id="ipV-FX-0sf" customClass="TimerSectionsVC" customModule="GymTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="b1d-Vi-QUb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimersCell" id="QwU-h1-89B">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QwU-h1-89B" id="nvN-wY-ir5">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ipV-FX-0sf" id="Xdc-D8-FE3"/>
+                            <outlet property="delegate" destination="ipV-FX-0sf" id="BP4-uV-5Cj"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Workouts" id="j4t-QX-s4e">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="X3n-vk-hfY">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="addBtnPressed:" destination="ipV-FX-0sf" id="Fnd-eP-rxi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="a2B-wD-19v" kind="show" identifier="GotoTimers" id="oaD-7e-cV5"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ulc-Yi-VRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="-171"/>
+        </scene>
+        <!--Timers-->
         <scene sceneID="4F8-J2-yeG">
             <objects>
                 <tableViewController id="a2B-wD-19v" customClass="TimersVC" customModule="GymTime" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,9 +56,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="zGb-wk-6FR">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="a2B-wD-19v" id="UZx-Ne-wrY"/>
+                            </connections>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TimersCell" id="2St-Hf-iii">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2St-Hf-iii" id="0J4-Zj-I8F">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -32,11 +79,18 @@
                             <outlet property="delegate" destination="a2B-wD-19v" id="fDO-GB-wfy"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fa7-vi-ryP"/>
+                    <navigationItem key="navigationItem" title="Timers" id="fa7-vi-ryP">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Ul0-KQ-G82">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addBtnPressed:" destination="a2B-wD-19v" id="N29-iV-gee"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVF-TY-BWX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1012" y="-131.78410794602701"/>
+            <point key="canvasLocation" x="1630" y="-154"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="CBD-fU-bxu">
@@ -47,15 +101,21 @@
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.32549019607843138" green="0.31764705882352939" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="a2B-wD-19v" kind="relationship" relationship="rootViewController" id="QZc-qm-EE1"/>
+                        <segue destination="ipV-FX-0sf" kind="relationship" relationship="rootViewController" id="Z4g-Dt-wFF"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gdf-0z-A8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="58" y="-142"/>
+            <point key="canvasLocation" x="-244" y="-139"/>
         </scene>
     </scenes>
 </document>

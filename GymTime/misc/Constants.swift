@@ -2,8 +2,8 @@
 //  Constants.swift
 //  GymTime
 //
-//  Created by maf macbook on 21/05/2018.
-//  Copyright © 2018 maf macbook. All rights reserved.
+//  Created by maf macbook on 21/05/2017.
+//  Copyright © 2017 maf macbook. All rights reserved.
 //
 
 import Foundation

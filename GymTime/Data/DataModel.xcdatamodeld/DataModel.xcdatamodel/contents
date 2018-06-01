@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G1114" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Timer" representedClassName=".Timer" syncable="YES" codeGenerationType="class">
+        <attribute name="done" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" attributeType="String" syncable="YES"/>
+        <relationship name="parent" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="TimerSections" inverseName="timers" inverseEntity="TimerSections" syncable="YES"/>
+    </entity>
+    <entity name="TimerSections" representedClassName="TimerSections" syncable="YES" codeGenerationType="class">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <relationship name="timers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Timer" inverseName="parent" inverseEntity="Timer" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Timer" positionX="7324" positionY="-2457" width="128" height="88"/>
+        <element name="TimerSections" positionX="7072" positionY="-2512" width="128" height="73"/>
+    </elements>
+</model>
