@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044A7661296BD175E70E1F34 /* Pods_GymTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D8C8B34D6446273829E985C /* Pods_GymTime.framework */; };
 		4146080820B32E1000BB0674 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4146080720B32E1000BB0674 /* AppDelegate.swift */; };
 		4146080D20B32E1000BB0674 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4146080B20B32E1000BB0674 /* Main.storyboard */; };
 		4146080F20B32E1000BB0674 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4146080E20B32E1000BB0674 /* Assets.xcassets */; };
@@ -28,6 +29,9 @@
 		4146081D20B3306C00BB0674 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		41C815D620B4601C00059866 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		41E754EE20B5A97400BCF332 /* TimerSectionsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSectionsVC.swift; sourceTree = "<group>"; };
+		743809489BBF1DBD695138E6 /* Pods-GymTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTime.release.xcconfig"; path = "Pods/Target Support Files/Pods-GymTime/Pods-GymTime.release.xcconfig"; sourceTree = "<group>"; };
+		8D8C8B34D6446273829E985C /* Pods_GymTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GymTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A464198E18CEE24D8706FCBB /* Pods-GymTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GymTime.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GymTime/Pods-GymTime.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044A7661296BD175E70E1F34 /* Pods_GymTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		143ADC6A26CAC11CB87F1960 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D8C8B34D6446273829E985C /* Pods_GymTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		414607FB20B32E1000BB0674 = {
 			isa = PBXGroup;
 			children = (
 				4146080620B32E1000BB0674 /* GymTime */,
 				4146080520B32E1000BB0674 /* Products */,
+				43A648C51BDD52DE17A31602 /* Pods */,
+				143ADC6A26CAC11CB87F1960 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +120,15 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
+		43A648C51BDD52DE17A31602 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A464198E18CEE24D8706FCBB /* Pods-GymTime.debug.xcconfig */,
+				743809489BBF1DBD695138E6 /* Pods-GymTime.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -112,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4146081620B32E1000BB0674 /* Build configuration list for PBXNativeTarget "GymTime" */;
 			buildPhases = (
+				6FDE68063BE6D0C577838BD0 /* [CP] Check Pods Manifest.lock */,
 				4146080020B32E1000BB0674 /* Sources */,
 				4146080120B32E1000BB0674 /* Frameworks */,
 				4146080220B32E1000BB0674 /* Resources */,
+				204B3E65F6C43030856FE2BF /* [CP] Embed Pods Frameworks */,
+				F1F026369D2A378A1B66D6ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -171,6 +198,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		204B3E65F6C43030856FE2BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymTime/Pods-GymTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6FDE68063BE6D0C577838BD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F1F026369D2A378A1B66D6ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GymTime/Pods-GymTime-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4146080020B32E1000BB0674 /* Sources */ = {
@@ -316,6 +391,7 @@
 		};
 		4146081720B32E1000BB0674 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A464198E18CEE24D8706FCBB /* Pods-GymTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -331,6 +407,7 @@
 		};
 		4146081820B32E1000BB0674 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 743809489BBF1DBD695138E6 /* Pods-GymTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
